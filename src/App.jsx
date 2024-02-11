@@ -1,5 +1,16 @@
+import { BrowserRouter } from "react-router-dom";
+import { GlobalStyles } from "./styles/global-styles";
+// import FilterUsers from "./components/filterusers/FilterUsers";
+import Router from "./Router/Router";
+
 const App = () => {
-	return <h1>Núcleo de la aplicación</h1>;
+	return (
+		<BrowserRouter>
+			<GlobalStyles />
+
+			<Router />
+		</BrowserRouter>
+	)
 };
 
 export default App;
