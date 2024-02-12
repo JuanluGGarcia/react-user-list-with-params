@@ -1,8 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { StyledUserContainer } from '../filterusers/style';
 
 import {
 	StyledActiveUser,
-	StyledLink,
+	// StyledLink,
 	StyledDataUser,
 	StyledImgUser,
 	StyledNameUser,
@@ -11,6 +12,7 @@ import {
 
 // Se encarga de pintar las cards de los usuarios
 const CardUser = ({ userId, name, username, profileImage, active }) => {
+	const navigate = useNavigate();
 	return (
 		<StyledUserContainer>
 			<StyledDataUser>
@@ -25,7 +27,8 @@ const CardUser = ({ userId, name, username, profileImage, active }) => {
 					{active ? 'Activo' : 'Inactivo'}{' '}
 				</StyledActiveUser>
 
-				<StyledLink to={`/${userId}`}>Ver Detalles</StyledLink>
+				{/* <StyledLink to=</StyledLink> */}
+				<button onClick={() => navigate(`/${userId}`)}>Ver Detalles</button>
 			</StyledDataUser>
 		</StyledUserContainer>
 				

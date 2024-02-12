@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledUserContainer = styled.div`
@@ -37,15 +37,15 @@ const StyledActiveUser = styled.span`
 	color: ${({ $active }) => ($active ? 'green' : 'red')};
 `;
 
-const StyledLink = styled(Link)`
-	text-decoration: none;
-	background-color: #f3f3f3;
-	color: #000;
-	padding: 2px 5px;
-	border-radius: 2px;
-	border: 1px solid #000;
-	font-size: 0.9rem;
-`;
+// const StyledLink = styled(Link)`
+// 	text-decoration: none;
+// 	background-color: #f3f3f3;
+// 	color: #000;
+// 	padding: 2px 5px;
+// 	border-radius: 2px;
+// 	border: 1px solid #000;
+// 	font-size: 0.9rem;
+// `;
 
 export {
 	StyledUserContainer,
@@ -53,6 +53,6 @@ export {
 	StyledImgUser,
 	StyledNameUser,
 	StyledUsernameUser,
-	StyledActiveUser,
-	StyledLink
+	StyledActiveUser
+	// StyledLink
 };

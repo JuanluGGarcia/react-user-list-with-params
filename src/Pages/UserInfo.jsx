@@ -1,18 +1,20 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { USERS } from "../constants/users";
-import { StyledLink } from "./style";
+// import { StyledLink } from "./style";
 
 const UserInfo = () => {
     const { userId } = useParams();
+    const navigate = useNavigate();
     // console.log(userId)
 
     const pickUser = USERS.find(user => user.userId === userId);
     // console.log(pickUser)
     return (
         <div>
-            <div>
-                <StyledLink to='/'>Back to Users</StyledLink>
-            </div>
+            
+                {/* <StyledLink to='/'>Back to Users</StyledLink> */}
+            <button onClick={() => navigate('/')}>Back to Users</button>
+    
             <img src={pickUser.profileImage} alt={pickUser.name} />
             <br />
             <h1>Hi! My name is {pickUser.name}</h1>
