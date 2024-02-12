@@ -5,11 +5,14 @@ import Router from "./Router/Router";
 
 const App = () => {
 	return (
-		<BrowserRouter>
+		<>
 			<GlobalStyles />
 
-			<Router />
-		</BrowserRouter>
+			<BrowserRouter>
+				<Router />
+			</BrowserRouter>
+		
+		</>
 	)
 };
 
